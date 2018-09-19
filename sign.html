@@ -1,0 +1,184 @@
+﻿<html>
+<head>
+  <link href="https://fonts.googleapis.com/css?family=Do+Hyeon|Indie+Flower" rel="stylesheet">
+  <script src="jquery.js"></script>
+</head>
+<body>
+<form>
+  <div class="container">
+    <center><h1><b>Register Here</b></h1></center>
+    
+    <hr>
+    <label for="Firstname" id="lab1"><b>First Name</b></label>
+    <input type="text" placeholder="Enter First Name"  name="Firstname" required id="user6">
+    <label for="Lastname" id="lab2"/><b>Last Name</b></label>
+    <input type="text" placeholder="Enter Last Name" name="Lastname" required id="user7">
+
+    <label for="email" id="lab3"><b>Email</b></label>
+    <input type="text" placeholder="Enter Email" name="email" required id="user1">
+
+    <label for="psw" id="lab4"><b>Password</b></label>
+    <input type="password" placeholder="Enter Password" name="psw" required id="user2">
+
+    <label for="psw-repeat" id="lab5"><b>Repeat Password</b></label>
+    <input type="password" placeholder="Repeat Password" name="psw-repeat" required id="user3" >
+    <hr>
+    <label for="phno" id="lab6"><b>Enter PhoneNo</b></label>
+    <input type="text" placeholder="Phone Number" name="phno" required id="user4" >
+    <label for="address" id="lab7"><b>Enter your Address</b></label>
+    <input type="text" placeholder="address" name="address" required id="user5" >
+
+
+    <center><button class="registerbtn"onclick="save1()">Register</button></center>
+  </div>
+
+  <div class="container signin">
+
+  </div>
+</form>
+<center><a href="HomePage.html">HOME</a></center>
+<style>
+  
+.container {
+  padding: 16px;
+}
+
+input[type=text], input[type=password] {
+  width: 100%;
+  padding: 15px;
+  margin: 5px 0 22px 0;
+  display: inline-block;
+  border: none;
+  background:lightpink;
+  opacity: 0.6;
+  
+}
+
+input[type=text]:focus, input[type=password]:focus {
+  background-color: #ddd;
+  outline: none;
+  
+}
+#user1,#user2,#user3,#user4,#user5,#user6,#user7{ 
+  font-family: 'Do Hyeon', sans-serif;
+  font-weight: bolder;
+  font-size: 25px;
+  
+
+}
+hr {
+  border: 1px solid #f1f1f1;
+  margin-bottom: 25px;
+}
+#lab1,#lab2,#lab3,#lab4,#lab5,#lab6,#lab7{
+  font-weight: bolder;
+  font-size: 30px;
+color:darkmagenta;
+font-family: 'Indie Flower', cursive;
+}
+.registerbtn {
+  background-color: #4CAF50;
+  font-weight: bolder;
+  font-size: 30px;
+color:red;
+font-family: 'Indie Flower', cursive;
+  padding: 16px 20px;
+  margin: 8px 0;
+border-radius: 30%;
+border-color: #4CAF50;
+
+  cursor:crosshair;
+  width: 40%;
+  opacity: 0.9;
+}
+
+.registerbtn:hover {
+  opacity:1;
+}
+
+a {
+  font-weight: bolder;
+  font-size: 30px;
+color:darkturquoise;
+font-family: 'Indie Flower', cursive;
+ border: inset;
+ border-color: red;
+}
+
+.signin {
+  background-color: #f1f1f1;
+  text-align: center;
+}
+h1{
+  background: repeating-linear-gradient(
+  45deg,
+  yellow,
+  orange 10px,
+  yellow 10px,
+  #465298 20px
+);
+  border-radius: 30%;
+  font-family: 'Indie Flower', cursive;
+  color:darkblue;
+  border:inset;
+  font-weight: bold;
+  border-color: red;
+}
+</style>
+</body>
+<script>$(document).ready(function(){
+    for(let i=0;i<=500;i++)
+    {
+  $("h1").fadeToggle(1000);  
+    }
+ 
+});
+  </script>
+<script>
+
+  function save1(){
+
+    let user1=document.getElementById('user1').value
+    let user2=document.getElementById('user2').value
+    let user3=document.getElementById('user3').value
+    let user4=document.getElementById('user4').value
+    let user5=document.getElementById('user5').value
+    let user6=document.getElementById('user6').value
+    let user7=document.getElementById('user7').value
+    if(validin()){
+    if(user2==user3)
+    {
+    let obj1={"user1":user1,"user2":user2,"user4":user4,"user5":user5,"user6":user6,"user7":user7};
+    
+    let myObj = JSON.stringify(obj1);
+    localStorage.setItem('text',myObj);
+    alert("YOU ARE SUCCESFULLY REGISTERED");
+   }
+   else
+   {
+     alert("THE ENTERED PASSWORDS DO NOT MATCH");
+   }
+}
+else{
+  alert("THE ENTERED PASSWORDS DO NOT MATCH");
+}
+}
+function validin(){ // regular expressions
+    
+    let email=/^\w+@[a-zA-Z_]+?\.[a-zA-Z]{2,3}$/;
+    let passwd=/^(?=.*\d).{4,8}$/;
+    
+     if(!email.test(user1.value))
+        {alert("invalid email");
+         return false;
+      }
+    
+    if(!passwd.test(user2.value) || !passwd.test(user3.value))
+      {alert("invalid passwords");
+        return false;}
+    return true;
+ 
+}
+
+</script>
+</html>

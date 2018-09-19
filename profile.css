@@ -1,0 +1,64 @@
+#container{
+    background-color:lightcyan;
+    width:80%;
+  
+    margin-right:auto;
+    margin-left:auto;
+    margin-top:100px;
+    color:orchid;
+    text-align:center;
+}
+#abtme{
+    background-color:cyan;
+    HEIGHT:100px;
+    color:orchid;
+    text-align:center;
+    line-height:100px;
+}
+#navi{
+    color:blue;
+    float:left;
+    width:20%;
+}
+#main{
+    color:rgb(228, 142, 31);
+    float:right;
+    width:80%;
+    
+}
+#footer{
+    background-color: #f3e5f5;
+    clear:both;
+    height:5%;
+ 
+    text-align:right;
+
+}
+@media only screen and (max-width:800px){
+    #b{
+        background-color: lightcyan;
+    }
+    #container{
+        width:100%;
+    }
+    #navi{
+        width:30%;
+    }
+    #main{
+        width:70%;
+    }
+}
+@media only screen and (max-width:400px){
+    #b{
+        background-color:lime;
+    }
+    #container{
+        width:100%;
+    }
+    #navi{
+        width:100%;
+    }
+    #main{
+        width:100%;
+    }
+}

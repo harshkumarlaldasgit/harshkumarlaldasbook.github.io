@@ -1,0 +1,75 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>jQuery UI Progressbar - Default functionality</title>
+    <link href="https://fonts.googleapis.com/css?family=Concert+One|Fira+Sans+Condensed|Permanent+Marker" rel="stylesheet">
+     
+  
+</head>
+<body style="background: url(txn.jpg) no-repeat center center fixed;background-size: cover;">
+    <center>
+<div id="loader"></div>
+<div id="pro"><h1><b>Your TRANSACTION Is Being Processed!!</b></h1></div>
+<div id="done" ><SPAN style="color:burlywood">TRANSACTION SUCCESSFUL</SPAN><br>THANK YOU!
+<BR>{ &copy HARSH KUMAR<BR>16B-562<br>CVR }
+
+
+
+</div>
+</center>   
+<script src="jquery.js"></script>
+<script src="jquery-ui-1.12.1/jquery-ui.js"></script>
+<script src="jquery-ui-1.12.1/jquery-ui.min.js"></script>
+<script>
+    $(document).ready(function(){
+            
+          $('#loader').hide(10000);
+          $('#pro').hide(10000);
+          $('#done').hide().delay(10000).show(2000);
+       
+          setTimeout('window.open("HomePageNew.html","_self")',15000);
+    });
+</script>
+</body>
+<style>
+    #pro{
+        font-family: 'Permanent Marker', cursive;
+        border:dotted;
+        border-radius: 20%;
+        border-color: black;
+       color:coral;
+        width:60%;
+        height:40%;
+      
+    }
+    #done{
+        margin-top: 20%;
+        text-align: center;
+        font-family: 'Permanent Marker', cursive;
+        border:outset;
+        color:coral;
+        font-size: 30px;    
+        width:40%;
+        height:80%;
+    }
+    #loader {
+    border: 16px solid #f3f3f3; /* Light grey */
+    border-top: 16px solid #3498db; /* Blue */
+    border-radius: 50%;
+    border-top: 16px solid blue;
+ border-right: 16px solid green;
+ border-bottom: 16px solid red;
+ border-left: 16px solid pink;
+    width: 120px;
+    height: 120px;
+    animation: spin 2s linear infinite;
+}
+
+@keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
+</style>
+</html>

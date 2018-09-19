@@ -1,0 +1,230 @@
+html{
+	margin:0;
+	padding:0;
+	
+}
+
+body{
+	margin:0;
+	padding:0;
+	font-family: 'Ubuntu', sans-serif;
+	}
+
+#topBox{
+	
+	height:60vh;
+	width:100%;
+	background-image:url(bg.jpg);	
+	
+	animation: imageChange 21s infinite ease-in-out  ;
+	animation-direction: alternate-reverse;
+	animation-direction: reverse;
+	position:relative;
+	background-size:cover;
+	background-attachment:fixed;
+	z-index:1;
+	box-shadow: inset 0px 15px 30px 10px rgba(0,0,0,0.5), inset 0px -15px 30px 10px rgba(0,0,0,0.5);
+}
+
+#header{
+	color:white;
+	height:20px;
+	padding:4px;
+	text-align:right;
+	position:relative;
+	vertical-align:right-side;
+	
+	}
+
+#header a{
+	
+	text-decoration:none;
+	color:white;
+	padding:5px;
+}
+
+#logoName{
+	width:100%;
+	
+	font-size:50px;
+	color:lightslategray;
+	margin:0px;
+	text-align:center;
+	position:relative;
+	top:50px;
+	text-shadow: 0 0 3px #FF0000,1px 1px 2px black, 0 0 25px blue, 0 0 5px darkblue;
+	text-outline: 2px 2px #ff0000;
+	
+	
+	
+	
+}
+
+#floating {
+	clear:both;
+	
+	position:relative;
+	top:30px;
+	float:right;
+	
+}
+
+#floating button {
+	width:300px;
+	height:60px;
+	border-radius:30px;
+	border:none;
+	font-size:20px;
+	background-color:crimson;
+	color:rgba(255,255,255,0.8);
+	box-shadow: 2px 2px black,-2px -2px rgba(0,0,0,0.5);
+}
+#floating button:focus{
+	outline:none;
+}
+
+#floating button:hover{
+	cursor:pointer;
+}
+
+#bottomBox{
+	background-image: url(images.jpg);
+	height: 60vh;
+	width:100%;
+	position:relative;
+	background-color:white;
+	z-index:1;
+	font-family: 'Ubuntu', sans-serif;
+
+}
+
+#info{
+	
+	
+	padding:5px;
+	font-size:20px;
+	width:100%;
+	
+}
+#info p{
+	margin:auto;
+	
+	text-align:justify;
+}
+
+#welcomep{
+	
+	color:orangered;
+	font-family: 'Hanalei Fill', cursive;
+	font-size:50px;
+	text-align:justify;
+	text-shadow: 0 0 3px #FF0000;
+}
+#restp{
+	font-family: 'Permanent Marker', cursive;
+	color:royalblue;
+
+	font-size:20px;
+	text-align:justify;
+}
+
+#footer{
+	width:100%;
+	position:relative;
+	color: yellowgreen;
+	font-size:13px;
+}
+
+
+#fb{
+	position:relative;
+	padding:5px;
+	float:left;
+	height:30px;
+	width:30px;
+	border-radius:50%;
+}
+#insta{
+	padding:5px;
+	position:relative;
+	float:left;
+	height:30px;
+	width:30px;
+	border-radius:50%;
+}
+
+#footer p{
+	float:right;
+	padding:2px;
+}
+#b1,#b2{
+	width:180px;
+	height:50px;
+	border-radius:30px;
+	border:none;
+	font-size:16px;
+	background-color:crimson;
+	color:rgba(255,255,255,0.8);
+	box-shadow: 2px 2px black,-2px -2px rgba(0,0,0,0.5);
+
+}
+
+
+
+@keyframes imageChange{
+	0%{
+		background-image:url(b1.jpg);
+			
+	}
+	33%{
+		background-image:url(b2.jpeg);
+	}
+	66%{
+		background-image:url(b3.jpg);
+	}
+	
+}
+
+@media only screen and (max-width: 900px){
+	
+	#logoName{
+	width:100%;
+	font-size:30px;
+	
+	margin:0px;
+	text-align:center;
+	position:relative;
+	top:100px;
+	text-shadow:2px 2px 2px rgba(0,0,0,0.5);
+	}
+	
+}
+
+@media only screen and (max-width: 600px) {
+	#logoName{
+	width:100%;
+	font-size:20px;
+	
+	margin:0px;
+	text-align:center;
+	position:relative;
+	top:135px;
+	
+	text-shadow:2px 2px 2px rgba(0,0,0,0.5);
+	}
+	
+	#floating button {
+	width:180px;
+	height:50px;
+	border-radius:30px;
+	border:none;
+	font-size:16px;
+	background-color:crimson;
+	color:rgba(255,255,255,0.8);
+	box-shadow: 2px 2px black,-2px -2px rgba(0,0,0,0.5);
+}
+    
+}
+
+
+

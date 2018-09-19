@@ -1,0 +1,244 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+        <title>CATALOG</title>
+        <link rel="stylesheet" href="cat.css">
+        
+        
+
+</head>
+<body id="body" style="background-image:url(images.jpg)">
+   <div id="div1"> <h2 STYLE="border:dotted;text-align: center;border-radius: 30%">BOOK SHELF</h2>
+       <div id="lab3">PRICE RANGE<span id="spanOutput"></span>
+  
+  <div id="slider"></div>
+</div>
+  <label for="txtMin" id="lab1">Minimum Value</label>
+  <input id="txtMin" type="text" />
+  
+  <label for="txtMax" id="lab2">Maximum Value  </label>
+  <input id="txtMax" type="text" />
+  <button id="search" onclick="search()">SEARCH</button>
+</div>
+<div id="myBtnContainer">
+  <button class="btn active" onclick="filterSelection('all')"> SHOW ALL</button>
+  <button class="btn" onclick="filterSelection('nature')"> FICTION</button>
+  <button class="btn" onclick="filterSelection('cars')"> MANGA</button>
+  <button class="btn" onclick="filterSelection('people')"> SCIENTIFIC</button>
+</div>
+<strong><big><a href="cart2.html" style="float:right;color: darkgoldenrod";>CART</a></strong></big><br>
+<strong><big><a href="HomePageNew.html" style="float:right;color:darkgoldenrod";>GO BACK</a></strong></big>
+<table>
+  <tr>
+<div class="row">
+    <div class="column nature">
+        <div class="content">
+          <img src="bs1.jpg" alt="THE HOBBIT" style="width:50%">
+          
+          <h4 id="hid">THE HOBBIT</h4>
+          <p id="pid">400</p><button id="badd" onclick="amt()" >ADD</button><br>
+          <p id="pa" style="color:coral;">The Hobbit, or There and Back Again is a children's fantasy novel by English author J. R. R. Tolkien. </p>
+          <button id="badd1" onclick="details()" >DETAIL</button>
+        </div>
+      </div>
+  <div class="column nature">
+    <div class="content">
+      <img src="got.jpg" alt="Game Of Thrones" style="width:50%">
+      
+      <h4 id="hid1">Game Of Thrones</h4>
+      <p id="pid1">600</p><button id="badd" onclick="amt1()" >ADD</button><br>
+      <p id="pa2">A Game of Thrones by George R. R. Martin is a fantasy set in Westeros.</p>
+      <button id="badd2" onclick="details2()" >DETAIL</button>
+    </div>
+  </div>
+  <div class="column nature">
+    <div class="content">
+      <img src="wwz.jpg" alt="World War Z" style="width:50%">
+      
+      <h4 id="hid2">World War Z</h4>
+      <p id="pid2">300</p><button id="badd" onclick="amt2()" >ADD</button><br>
+      <p id="pa3">An Oral History of the Zombie War is a 2006 apocalyptic horror novel written by American author Max Brooks. </p>
+      <button id="badd3" onclick="details3()" >DETAIL</button>
+    </div>
+  </div>
+  </div>
+</tr>
+<tr>
+<div class="row">
+  <div class="column cars">
+    <div class="content">
+      <img src="wol.jpg" alt="Poke" style="width:50%">
+      
+      <h4 id="hid3">DEADCALM</h4>
+      <p id="pid3">550</p><button id="badd" onclick="amt3()" >ADD</button><br>
+      <p id="pa4">Dead Calm is a 1963 novel by Charles F. Williams.</p>
+      <button id="badd4" onclick="details4()" >DETAIL</button>
+    </div>
+  </div>
+
+  <div class="column cars">
+    <div class="content">
+      <img src="tokyo.jpg" alt="Tokyo Ghoul" style="width:50%">
+      
+      <h4 id="hid4">Tokyo Ghoul</h4>
+      <p id="pid4">600</p><button id="badd" onclick="amt4()" >ADD</button><br>
+      <p id="pa5">Tokyo Ghoul is a Japanese dark fantasy manga series written and illustrated by Sui Ishida.</p>
+      <button id="badd5" onclick="details3()" >DETAIL</button>
+    </div>
+  </div>
+  <div class="column cars">
+    <div class="content">
+      <img src="dbz.jpg" alt="Dragon Ball Z" style="width:50%">
+      <h4>Dragon Ball Z</h4>
+      <p id="pid5">350</p><button id="badd">ADD</button><br>
+      <p id="pa6">DBZ is a Japanese anime television series produced by Toei Animation.</p>
+      <button id="badd6" onclick="details3()" >DETAIL</button>
+    </div>
+  </div>
+  </div>
+</tr>
+<tr>
+    <div class="row">
+  <div class="column people">
+    <div class="content" >
+      <img src="ORIGIN.jpg" alt="Encyclopedia" style="width:50%">
+      <h4>Dan Brown </h4>
+      <p id="pid6">800</p><button id="badd">ADD</button><br>
+      <p id="pa7">Origin is a 2017 mystery thriller novel by American author Dan Brown and the fifth installment in his Robert Langdon series. </p>
+        <button id="badd7" onclick="details3()" >DETAIL</button>
+    </div>
+  </div>
+  <div class="column people">
+    <div class="content">
+      <img src="ONE.jpg" alt="Forensic" style="width:50%">
+      <h4>One Small Thing</h4>
+      <p>500</p><button id="badd">ADD</button><br>
+      <p id="pa8">Dead Calm is a 1963 novel by Charles F. Williams.</p>
+      <button id="badd8" onclick="details3()" >DETAIL</button>
+    </div>
+  </div>
+  <div class="column people">
+    <div class="content">
+      <img src="red.jpg" alt="Geology" style="width:50%">
+      <h4>RED SEA </h4>
+      <p>450</p><button id="badd">ADD</button><br>
+      <p id="pa9">Dead Calm is a 1963 novel by Charles F. Williams.</p>
+      <button id="badd9" onclick="details3()" >DETAIL</button>
+    </div>
+  </div>
+ </div>
+</tr>
+</table>
+<style>
+  #body{
+    background-image: url("images.jpg");
+  }
+</style>
+
+
+</body>
+<script type="text/javascript" src='catscript.js'></script>
+<script src="jquery.js"></script>
+<script src="jquery-ui-1.12.1/jquery-ui.js"></script>
+<script type="text/javascript" src='catbutton.js'></script>
+<script>
+  $(document).ready(function () {
+    var outputSpan = $('#spanOutput');
+    var sliderDiv = $('#slider');
+
+    sliderDiv.slider({
+        range: true,
+        min: 400,
+        max: 1000,
+        values: [20, 30],
+        slide: function (event, ui) {
+            outputSpan.html(ui.values[0] + ' - ' + ui.values[1] + ' Years');
+        },
+        slide: function (event, ui) {
+            $('#txtMin').val(ui.values[0]);
+            $('#txtMax').val(ui.values[1]);
+        }
+    });
+
+   
+    $('#txtMin').val(sliderDiv.slider('values', 0));
+    $('#txtMax').val(sliderDiv.slider('values', 1));
+    console.log(sliderDiv.slider('values', 0))
+});
+
+function search(){
+
+  let x=[]; 
+x[0]=document.getElementById("pid").innerHTML;
+x[1]=document.getElementById("pid1").innerHTML;
+x[2]=document.getElementById("pid2").innerHTML;
+x[3]=document.getElementById("pid3").innerHTML;
+x[4]=document.getElementById("pid4").innerHTML;
+x[5]=document.getElementById("pid5").innerHTML;
+x[6]=document.getElementById("pid6").innerHTML;
+x.sort();
+alert(x);
+let z=document.getElementById("txtMax").value;
+let y=document.getElementById("txtMin").value;
+}
+function checkAdult(age) {
+    return age >= document.getElementById("ageToCheck").value;
+}
+
+function myFunction() {
+    document.getElementById("demo").innerHTML = ages.find(checkAdult);
+}
+</script>
+<script>
+  
+        filterSelection("all") // Execute the function and show all columns
+        function filterSelection(c) {
+          var x, i;
+          x = document.getElementsByClassName("column");
+          if (c == "all") c = "";
+          // Add the "show" class (display:block) to the filtered elements, and remove the "show" class from the elements that are not selected
+          for (i = 0; i < x.length; i++) {
+            w3RemoveClass(x[i], "show");
+            if (x[i].className.indexOf(c) > -1) w3AddClass(x[i], "show");
+          }
+        }
+        
+        // Show filtered elements
+        function w3AddClass(element, name) {
+          var i, arr1, arr2;
+          arr1 = element.className.split(" ");
+          arr2 = name.split(" ");
+          for (i = 0; i < arr2.length; i++) {
+            if (arr1.indexOf(arr2[i]) == -1) {
+              element.className += " " + arr2[i];
+            }
+          }
+        }
+        
+        // Hide elements that are not selected
+        function w3RemoveClass(element, name) {
+          var i, arr1, arr2;
+          arr1 = element.className.split(" ");
+          arr2 = name.split(" ");
+          for (i = 0; i < arr2.length; i++) {
+            while (arr1.indexOf(arr2[i]) > -1) {
+              arr1.splice(arr1.indexOf(arr2[i]), 1); 
+            }
+          }
+          element.className = arr1.join(" ");
+        }
+        
+        // Add active class to the current button (highlight it)
+        var btnContainer = document.getElementById("myBtnContainer");
+        var btns = btnContainer.getElementsByClassName("btn");
+        for (var i = 0; i < btns.length; i++) {
+          btns[i].addEventListener("click", function(){
+            var current = document.getElementsByClassName("active");
+            current[0].className = current[0].className.replace(" active", "");
+            this.className += " active";
+          });
+        
+        }
+        </script>
+        
+</html>
